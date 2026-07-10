@@ -1753,8 +1753,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     parameters: [],
   },
   gain: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         defaultValue: "1",
@@ -1769,8 +1773,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   bias: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         defaultValue: "0",
@@ -1785,8 +1793,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   softClipper: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         defaultValue: "0",
@@ -1868,9 +1880,13 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   passiveFilter: {
-    inputs: ["In"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
     layout: "filterCurve",
-    outputs: ["Out"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: ["LP", "BP", "HP"],
@@ -1912,9 +1928,13 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   cookbookFilter: {
-    inputs: ["In"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
     layout: "filterCurve",
-    outputs: ["Out"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: nodeGraphCookbookFilterModes,
@@ -1977,8 +1997,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   rsmetFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: ["LP6", "LP12", "LP18", "LP24", "HP6", "HP12", "HP18", "HP24", "BP6", "BP12"],
@@ -2000,8 +2024,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   yellowjacketFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       { defaultValue: "0.5", key: "frequency", label: "Frequency", max: "1", mid: "0.5", min: "0", nonlinearSlider: false, step: "any" },
       { defaultValue: "0.2", key: "resonance", label: "Resonance", max: "1", mid: "0.2", min: "0", nonlinearSlider: false, step: "any" },
@@ -2009,8 +2037,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   superloveFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: ["LP18", "LP24", "HP6", "BP6"],
@@ -2032,8 +2064,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   chaoticPhaseLockingFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       { defaultValue: "0.5", key: "frequency", label: "Frequency", max: "1", mid: "0.5", min: "0", nonlinearSlider: false, step: "any" },
       { defaultValue: "0.2", key: "resonance", label: "Resonance", max: "1", mid: "0.2", min: "0", nonlinearSlider: false, step: "any" },
@@ -2041,8 +2077,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   resonatorFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: ["Sinusoid", "Triangle", "Sawtooth"],
@@ -2064,8 +2104,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   humanFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: ["BP6", "LP6", "LP12"],
@@ -2087,8 +2131,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   flowerChildFilter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: ["Clean", "Dirty", "Rev3", "Downsampled"],
@@ -2137,9 +2185,13 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   ladderFilter: {
-    inputs: ["In"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
     layout: "filterCurve",
-    outputs: ["Out"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: nodeGraphLadderFilterModes,
@@ -2191,9 +2243,13 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   tb303Filter: {
-    inputs: ["In"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
     layout: "filterCurve",
-    outputs: ["Out"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         choices: nodeGraphTb303FilterModes,
@@ -2249,8 +2305,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   delayEffect: {
-    inputs: ["In"],
-    outputs: ["Out", "Wet"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right", "Wet"],
     parameters: [
       { defaultValue: "0.18", key: "time", kind: "time", label: "Time", max: "4", maxDigits: 5, mid: "0.18", min: "0.001", step: "any", unit: "s" },
       { defaultValue: "0.25", key: "feedback", label: "Feedback", max: "0.95", mid: "0.25", min: "0", nonlinearSlider: false, step: "any" },
@@ -2263,7 +2323,9 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   pingPongDelay: {
-    inputs: ["In"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
     outputs: ["Left", "Right"],
     parameters: [
       { control: "number", defaultValue: "1", key: "timeNumerator", label: "X", linearSmoothing: false, max: "16", maxDigits: 0, mid: "1", min: "0", nonlinearSlider: false, step: "1", tooltip: "Numerator of the tempo-synced time fraction (X/Y of a whole note). Never clamped -- 0 or negative means no time, and this can be pushed past its slider range by automation/modulation." },
@@ -2350,8 +2412,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   slewLimiter: {
-    inputs: ["In"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         defaultValue: "0.05",
@@ -2380,8 +2446,12 @@ const nodeGraphModuleDefinitions = Object.freeze({
     ],
   },
   sampleHold: {
-    inputs: ["In", "Trigger"],
-    outputs: ["Out"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right", "Trigger"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [
       {
         defaultValue: "0",
@@ -3015,9 +3085,13 @@ const nodeGraphModuleDefinitions = Object.freeze({
     parameters: [],
   },
   speakerProtection: {
-    inputs: ["In"],
+    inputAliases: { Mono: "In" },
+    inputLabels: { In: "Mono" },
+    inputs: ["In", "Left", "Right"],
     layout: "speakerProtection",
-    outputs: ["Out"],
+    outputAliases: { Mono: "Out" },
+    outputLabels: { Out: "Mono" },
+    outputs: ["Out", "Left", "Right"],
     parameters: [],
   },
   textBox: {
